@@ -54,7 +54,7 @@ function sqlAllJoins() {
     ";
 }
 
-function sqlUpdateEndTime($rentalId) {
+function sqlUpdateEndTime(int $rentalId) {
     return "
         UPDATE rentals 
         SET end_time = NOW() 
@@ -62,7 +62,7 @@ function sqlUpdateEndTime($rentalId) {
     ";
 }
 
-function sqlUpdateBikeStatus($bikeId) {
+function sqlUpdateBikeStatus(int $bikeId) {
     return "
         UPDATE bikes 
         SET available = 0 
