@@ -8,7 +8,7 @@ function sqlAllCustomers() {
 
 function sqlAvailableBikes() {
     return "
-        SELECT bike_id, model, type, hourly_rate FROM bikes 
+        SELECT bike_id, model, type, hourly_rate FROM bikes
         WHERE available = 1;
     ";
 }
@@ -68,5 +68,9 @@ function sqlUpdateBikeStatus(int $bikeId) {
         SET available = 0 
         WHERE bike_id = $bikeId;
     ";
+}
+
+function sqlCompleted() {
+    
 }
 ?>
